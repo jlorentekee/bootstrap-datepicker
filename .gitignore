@@ -1,3 +1,5 @@
 instrumented/
 tests/coverage.html
 docs/_build
+/nbproject
+/nbproject/*

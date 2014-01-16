@@ -25,15 +25,15 @@
 }
 
 // Button backgrounds
-.buttonBackground(@startColor, @endColor) {
-  .gradientBar(@startColor, @endColor);
+.buttonBackground(@start-color, @end-color) {
+  .gradientBar(@start-color, @end-color);
   .reset-filter();
   &:hover, &:active, &.active, &.disabled, &[disabled] {
-    background-color: @endColor;
+    background-color: @end-color;
   }
   &:active,
   &.active {
-    background-color: darken(@endColor, 10%) e("\9");
+    background-color: darken(@end-color, 10%) e("\9");
   }
 }
 
@@ -51,16 +51,16 @@
 
 // Gradients
 #gradient {
-  .vertical(@startColor: #555, @endColor: #333) {
-    background-color: mix(@startColor, @endColor, 60%);
-    background-image: -moz-linear-gradient(top, @startColor, @endColor); // FF 3.6+
-    background-image: -ms-linear-gradient(top, @startColor, @endColor); // IE10
-    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(@startColor), to(@endColor)); // Safari 4+, Chrome 2+
-    background-image: -webkit-linear-gradient(top, @startColor, @endColor); // Safari 5.1+, Chrome 10+
-    background-image: -o-linear-gradient(top, @startColor, @endColor); // Opera 11.10
-    background-image: linear-gradient(top, @startColor, @endColor); // The standard
+  .vertical(@start-color: #555, @end-color: #333) {
+    background-color: mix(@start-color, @end-color, 60%);
+    background-image: -moz-linear-gradient(top, @start-color, @end-color); // FF 3.6+
+    background-image: -ms-linear-gradient(top, @start-color, @end-color); // IE10
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(@start-color), to(@end-color)); // Safari 4+, Chrome 2+
+    background-image: -webkit-linear-gradient(top, @start-color, @end-color); // Safari 5.1+, Chrome 10+
+    background-image: -o-linear-gradient(top, @start-color, @end-color); // Opera 11.10
+    background-image: linear-gradient(top, @start-color, @end-color); // The standard
     background-repeat: repeat-x;
-    filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)",@startColor,@endColor)); // IE9 and down
+    filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)",@start-color,@end-color)); // IE9 and down
   }
 }
 
